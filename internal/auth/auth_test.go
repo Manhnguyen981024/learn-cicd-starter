@@ -17,7 +17,7 @@ func TestGetApiKey(t *testing.T) {
 	}
 
 	expectedApiKey := "abc123"
-	header.Set("Authorization", "ApiKey 1"+expectedApiKey)
+	header.Set("Authorization", "ApiKey "+expectedApiKey)
 	actualApiKey, err := GetAPIKey(header)
 	if err != nil {
 		t.Fatalf("Expected: get API key success with key abc123 but got an error %v", err)
